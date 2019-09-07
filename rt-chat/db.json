@@ -1,0 +1,14 @@
+{
+  "usertable": [
+    {
+      "id": 1,
+      "usernme": "Yash",
+      "password": "admin"
+    },
+    {
+      "usernme": "Yash2",
+      "password": "2admin1",
+      "id": 2
+    }
+  ]
+}
