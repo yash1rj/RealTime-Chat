@@ -1,1 +1,32 @@
-<p>registeration works!</p>
+<div class="text-center offset-md-3 col-md-6">
+    <div class="container-fluid col-md-9">
+        <form class="form-signin mt-5" [formGroup]="registerForm">
+            <h1 class="h3 mb-4 font-weight-normal">Register Yourself !</h1>
+
+            <div class="form-group">
+                <label for="usrname" class="sr-only">Username</label>
+                <input type="text" id="usrname" class="form-control" formControlName="username"
+                    placeholder="Username" autofocus>
+            </div>
+
+            <div class="form-group">
+                <label for="name" class="sr-only mt-1">Email address</label>
+                <input type="text" id="name" class="form-control" formControlName="name" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" class="sr-only mt-1">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" formControlName="emailId"
+                    placeholder="Email address">
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword" class="sr-only mt-1">Password</label>
+                <input type="password" id="inputPassword" class="form-control" formControlName="password"
+                    placeholder="Password">
+            </div>
+
+            <button class="btn btn-lg btn-primary btn-block mt-4" type="submit" [disabled]="!registerForm.valid">Register</button>
+        </form>
+    </div>
+</div>
