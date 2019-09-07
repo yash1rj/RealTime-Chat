@@ -16,21 +16,13 @@
 }
 
 #texting {
-    width: 81vw;
-    margin-left: 246px;
-    margin-right: 0px;
     padding-right: 0px;
-}
-
-#chatText {
-    width: 75vw;
+    padding-left: 0px;
 }
 
 .messages {
-    display: flex;
-    flex-direction: column;
     overflow-y: scroll;
-    height: 400px;
+    min-height: 50vh;
     border: 1px solid lightgray;
 }
 
@@ -49,5 +41,4 @@
 
 .ownMessage {
     background-color: lightblue;
-    align-self: flex-end;
 }

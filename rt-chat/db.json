@@ -2,13 +2,10 @@
   "userTable": [
     {
       "id": 1,
-      "usernme": "Yash",
+      "username": "yash1rj",
+      "name": "Yash Raj",
+      "email": "yashrj130@gmail.com",
       "password": "admin"
-    },
-    {
-      "usernme": "Yash2",
-      "password": "2admin1",
-      "id": 2
     }
   ],
   "chatTable": [   

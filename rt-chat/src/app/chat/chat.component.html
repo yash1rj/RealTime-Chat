@@ -14,7 +14,7 @@
 
         <div class="container-fluid">
             <h1 class="mt-4 text-center">Welcome to CHAT ROOM</h1>
-            <br />
+            <p class="text-right">Hello, User</p>
             <div class="messages">
                 <p class="msg">
                     <i class="usr">User1</i> <br /> Message1
@@ -26,15 +26,13 @@
                     <i class="usr">{{ message.username }}</i> <br /> {{ message.msg }}
                 </p>
             </div>
-        </div>
-
-        <div class="container-fluid fixed-bottom mb-2" id="texting">
-            <div>
-                <div class="float-left">
-                    <textarea class="form-control" id="chatText" rows="1"></textarea>
-                </div>
-                <div class="float-right p-0">
-                    <button class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            <br /><br /><br />
+            <div class="container-fluid mb-2" id="texting">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="chatText" />
+                    <div class="input-group-append">
+                        <button class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    </div>
                 </div>
             </div>
         </div>

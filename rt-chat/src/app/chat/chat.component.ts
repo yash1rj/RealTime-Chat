@@ -14,10 +14,10 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
     this.chatservice.getchats().subscribe(res => {
-      console.log(res);
+      // console.log(res);
       this.chatArr = res;
-      console.log(res[0].id);
-      console.log(this.chatArr);
+      // console.log(res[0].id);
+      // console.log(this.chatArr);
     }, err => {
       console.log(err.message);
     });
