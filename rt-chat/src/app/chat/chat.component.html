@@ -1,1 +1,34 @@
-<p>chat works!</p>
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-dark text-light border-right" id="sidebar-wrapper">
+        <div class="sidebar-heading border-bottom border-dark">Connections</div>
+        <div class="list-group list-group-flush">
+            <p class="list-group-item list-group-item-action bg-light text-dark">Dashboard</p>
+            <p class="list-group-item list-group-item-action bg-light text-dark">Shortcuts</p>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <div class="container-fluid">
+            <h1 class="mt-4">CHAT ROOM</h1>
+            <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on
+                larger screens. When toggled using the button below, the menu will change.</p>
+        </div>
+
+        <div class="container-fluid fixed-bottom mb-2" id="texting">
+            <div>
+                <div class="float-left">
+                    <textarea class="form-control" id="chatText" rows="1"></textarea>
+                </div>
+                <div class="float-right p-0">
+                    <button class="btn btn-primary"><i class="fa fa-paper-plane"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
