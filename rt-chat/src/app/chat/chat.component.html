@@ -4,8 +4,8 @@
     <div class="bg-dark text-light border-right" id="sidebar-wrapper">
         <div class="sidebar-heading border-bottom border-dark">Connections</div>
         <div class="list-group list-group-flush">
-            <p class="list-group-item list-group-item-action bg-light text-dark">Dashboard</p>
-            <p class="list-group-item list-group-item-action bg-light text-dark">Shortcuts</p>
+            <p class="list-group-item list-group-item-action bg-light text-dark">User1</p>
+            <p class="list-group-item list-group-item-action bg-light text-dark">User2</p>
         </div>
     </div>
 
@@ -13,14 +13,17 @@
     <div id="page-content-wrapper">
 
         <div class="container-fluid">
-            <h1 class="mt-4">CHAT ROOM</h1>
+            <h1 class="mt-4 text-center">Welcome to CHAT ROOM</h1>
             <br />
             <div class="messages">
                 <p class="msg">
-                    <i class="usr">Sender1</i> <br /> Message1
+                    <i class="usr">User1</i> <br /> Message1
                 </p>
                 <p class="msg" [ngClass]="{ ownMessage: 1===1 }">
-                    <i class="usr">Sender2</i> <br /> Message2
+                    <i class="usr">User2</i> <br /> Message2
+                </p>
+                <p class="msg" *ngFor="let message of chatArr">
+                    <i class="usr">{{ message.username }}</i> <br /> {{ message.msg }}
                 </p>
             </div>
         </div>
