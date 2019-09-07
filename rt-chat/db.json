@@ -1,5 +1,5 @@
 {
-  "usertable": [
+  "userTable": [
     {
       "id": 1,
       "usernme": "Yash",
@@ -9,6 +9,13 @@
       "usernme": "Yash2",
       "password": "2admin1",
       "id": 2
+    }
+  ],
+  "chatTable": [   
+    {
+      "id":1,
+      "username": "yash1rj",
+      "msg": "Hello RT-Chat!"
     }
   ]
 }
