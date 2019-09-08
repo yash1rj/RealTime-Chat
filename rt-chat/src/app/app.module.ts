@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterationComponent } from './registeration/registeration.component';
 import { ChatComponent } from './chat/chat.component';
+import { Validations } from './validators';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ChatComponent } from './chat/chat.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [Validations],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

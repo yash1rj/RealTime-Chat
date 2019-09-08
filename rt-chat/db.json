@@ -4,13 +4,38 @@
       "id": 1,
       "username": "yash1rj",
       "name": "Yash Raj",
-      "email": "yashrj130@gmail.com",
-      "password": "admin"
+      "emailId": "yashrj130@gmail.com",
+      "password": "Admin123",
+      "islogged": "false"
+    },
+    {
+      "username": "kumar1",
+      "name": "Ayush Kumar",
+      "emailId": "aayushk@gmail.com",
+      "password": "godfather",
+      "islogged": "false",
+      "id": 2
+    },
+    {
+      "username": "harshD",
+      "name": "harsh deora",
+      "emailId": "harsh.hero@hpe.com",
+      "password": "baaplog",
+      "islogged": "false",
+      "id": 3
+    },
+    {
+      "username": "elle",
+      "name": "Elesh agrawal",
+      "emailId": "elesh@autocop.com",
+      "password": "imellu",
+      "islogged": "false",
+      "id": 4
     }
   ],
-  "chatTable": [   
+  "chatTable": [
     {
-      "id":1,
+      "id": 1,
       "username": "yash1rj",
       "msg": "Hello RT-Chat!"
     }
