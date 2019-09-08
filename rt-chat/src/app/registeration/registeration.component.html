@@ -1,6 +1,6 @@
 <div class="text-center offset-md-3 col-md-6">
     <div class="container-fluid col-md-9">
-        <form class="form-signin mt-5" [formGroup]="registerForm">
+        <form class="form-signin mt-5" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <h1 class="h3 mb-4 font-weight-normal">Register Yourself !</h1>
 
             <div class="form-group">
@@ -30,3 +30,9 @@
         </form>
     </div>
 </div>
+<p>
+    Form Value: {{ registerForm.value | json }}
+  </p>
+<p>
+    Form Status: {{ registerForm.status }}
+</p>
