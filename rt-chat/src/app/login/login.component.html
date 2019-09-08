@@ -1,15 +1,19 @@
 <div class="text-center offset-md-3 col-md-6">
     <div class="container-fluid col-md-9">
-        <form class="form-signin mt-5" [formGroup]="loginForm">
+        <form class="form-signin mt-5" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" id="inputEmail" class="form-control" formControlName="emailId" placeholder="Email address"
                 autofocus>
+                <p *ngIf="loginForm.controls.emailId.dirty && this.loginForm.controls.emailId.errors" class="text-danger">
+                        {{ emailerrormsg }}</p>
             <br />
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" formControlName="password"
                 placeholder="Password">
+            <p *ngIf="loginForm.controls.password.dirty && this.loginForm.controls.password.errors" class="text-danger">
+                {{ passworderrormsg }}</p>
 
             <button class="btn btn-lg btn-primary btn-block mt-3" type="submit" [disabled]="!loginForm.valid">Sign
                 in</button>
