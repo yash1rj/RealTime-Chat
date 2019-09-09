@@ -12,10 +12,12 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  loginbody: any[];
+  loginbody;
+  loginCondition: boolean;
   allUsers: any[];
   passworderrormsg: string = "Please enter 8-18 characters. Password should include at least 1 small letter, 1 capital letter and a number";
-  emailerrormsg: string = "Please enter valid email Id."
+  emailerrormsg: string = "Please enter valid email Id.";
+  loginerrormsg: string = "Please try logging-in with correct credentials else Register with us."
   constructor(private fb: FormBuilder, private loginservice: LoginService, private loginvalidator: Validations, private router: Router) { }
 
   ngOnInit() {
@@ -40,11 +42,26 @@ export class LoginComponent implements OnInit {
     // TODO: Use EventEmitter with form value
     this.loginbody = this.loginForm.value;
     // console.log(this.loginbody);
-    for(let i = 0; i < this.allUsers.length; i++) {
-      if((this.loginbody.emailId === this.allUsers[i].emailId) && (this.loginbody.password === this.allUsers[i].password)) {
+    for (let i = 0; i < this.allUsers.length; i++) {
+      if ((this.loginbody.emailId === this.allUsers[i].emailId) && (this.loginbody.password === this.allUsers[i].password)) {
+        this.loginCondition = true;
+        this.allUsers[i].islogged = "true";
+        // console.log(this.allUsers);
+
+        this.loginservice.updateUser(i+1, { "islogged": "true" }).subscribe(
+          (data) => {
+            // console.log(data);
+          },
+          (error) => {
+            console.log(error.message);
+          }
+        );
         this.router.navigate(['chatroom']);
       }
-      
+      else {
+        this.loginCondition = false;
+      }
+
     }
     // this.registerservice.regUser(this.regbody).subscribe(
     //     (data)  => {
