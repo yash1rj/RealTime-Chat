@@ -14,4 +14,8 @@ export class LoginService {
   getUsers():Observable<any>{
     return <Observable<any>> this.http.get(this.userUrl);
   }
+
+  updateUser(id: number, attrib: Object):Observable<any>{
+    return <Observable<any>> this.http.patch(this.userUrl+"/"+id, attrib);
+  }
 }
