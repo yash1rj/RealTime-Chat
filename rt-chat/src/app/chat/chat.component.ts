@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../service/chat.service';
+import { LoginService } from '../service/login.service';
 
 @Component({
   selector: 'app-chat',
@@ -8,9 +9,11 @@ import { ChatService } from '../service/chat.service';
 })
 export class ChatComponent implements OnInit {
 
-  constructor(private chatservice: ChatService) { }
+  constructor(private chatservice: ChatService, private loginservice: LoginService) { }
 
   chatArr = [];
+  allUsers: any[];
+  loggedUser: string;
 
   ngOnInit() {
     this.chatservice.getchats().subscribe(res => {
@@ -21,5 +24,23 @@ export class ChatComponent implements OnInit {
     }, err => {
       console.log(err.message);
     });
+
+    this.loginservice.getUsers().subscribe(
+      (data) => {
+        // console.log(data);
+        this.allUsers = data;
+        for (let i = 0; i < this.allUsers.length; i++) {
+          console.log(this.allUsers[i].islogged);
+          if (this.allUsers[i].islogged) {
+            this.loggedUser = this.allUsers[i].username;
+            console.log(this.loggedUser);
+            break;
+          }
+        }
+      },
+      (error) => {
+        console.log(error.message);
+      }
+    );
   }
 }
