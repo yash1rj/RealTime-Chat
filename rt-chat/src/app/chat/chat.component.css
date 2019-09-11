@@ -22,8 +22,11 @@
 
 .messages {
     overflow-y: scroll !important;
-    height: 50vh;
+    max-height: 50vh;
     border: 1px solid lightgray;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
 }
 
 .msg {
@@ -41,4 +44,9 @@
 
 .ownMessage {
     background-color: lightblue;
+    align-self: flex-end !important;
+}
+
+#ppl {
+    background-color: #C2DFFF !important;
 }

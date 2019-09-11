@@ -6,7 +6,7 @@
       "name": "Yash Raj",
       "emailId": "yashrj130@gmail.com",
       "password": "Admin123",
-      "islogged": "true"
+      "islogged": "false"
     },
     {
       "username": "kumar1",
@@ -21,7 +21,7 @@
       "name": "harsh deora",
       "emailId": "harsh.hero@hpe.com",
       "password": "Baaplog2",
-      "islogged": "false",
+      "islogged": "true",
       "id": 3
     },
     {
@@ -71,48 +71,18 @@
     },
     {
       "username": "yash1rj",
-      "msg": "sad",
+      "msg": "how are you",
       "id": 8
     },
     {
-      "username": "yash1rj",
-      "msg": "",
+      "username": "harshD",
+      "msg": "fine",
       "id": 9
     },
     {
       "username": "yash1rj",
-      "msg": "",
+      "msg": "cfsdwdkfahsgiufdisdvbwaezsxcrdbygminj,oklp.1234567890azsxdev;fffffffffffffffffffff",
       "id": 10
-    },
-    {
-      "username": "yash1rj",
-      "msg": "",
-      "id": 11
-    },
-    {
-      "username": "yash1rj",
-      "msg": "",
-      "id": 12
-    },
-    {
-      "username": "yash1rj",
-      "msg": "bmnm",
-      "id": 13
-    },
-    {
-      "username": "yash1rj",
-      "msg": "",
-      "id": 14
-    },
-    {
-      "username": "yash1rj",
-      "msg": "vnbnmm,,.",
-      "id": 15
-    },
-    {
-      "username": "elle",
-      "msg": "sfdsdgfhjk",
-      "id": 16
     }
   ]
 }
