@@ -76,7 +76,7 @@ export class ChatComponent implements OnInit {
         
         this.loginservice.updateUser(i+1, { "islogged": "false" }).subscribe(
           (data) => {
-            console.log(data);
+            // console.log(data);
           },
           (error) => {
             console.log(error.message);
