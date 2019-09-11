@@ -21,8 +21,8 @@
 }
 
 .messages {
-    overflow-y: scroll;
-    min-height: 50vh;
+    overflow-y: scroll !important;
+    height: 50vh;
     border: 1px solid lightgray;
 }
 
