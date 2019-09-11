@@ -6,14 +6,14 @@
       "name": "Yash Raj",
       "emailId": "yashrj130@gmail.com",
       "password": "Admin123",
-      "islogged": "false"
+      "islogged": "true"
     },
     {
       "username": "kumar1",
       "name": "Ayush Kumar",
       "emailId": "aayushk@gmail.com",
       "password": "Godfather1",
-      "islogged": "true",
+      "islogged": "false",
       "id": 2
     },
     {
@@ -83,6 +83,11 @@
       "username": "yash1rj",
       "msg": "cfsdwdkfahsgiufdisdvbwaezsxcrdbygminj,oklp.1234567890azsxdev;fffffffffffffffffffff",
       "id": 10
+    },
+    {
+      "username": "yash1rj",
+      "msg": "wftrytuyul",
+      "id": 11
     }
   ]
 }
