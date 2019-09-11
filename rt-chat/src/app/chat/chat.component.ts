@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../service/chat.service';
 import { LoginService } from '../service/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -9,7 +10,7 @@ import { LoginService } from '../service/login.service';
 })
 export class ChatComponent implements OnInit {
 
-  constructor(private chatservice: ChatService, private loginservice: LoginService) { }
+  constructor(private chatservice: ChatService, private loginservice: LoginService, private router: Router) { }
 
   chatArr = [];
   allUsers: any[];
@@ -31,6 +32,7 @@ export class ChatComponent implements OnInit {
       (data) => {
         // console.log(data);
         this.loggedUser = sessionStorage.getItem("loggedUser");
+        this.allUsers = data;
         this.allLoggedUsers = data.filter(function (user) {
           return user.islogged == 'true';
         });
@@ -52,7 +54,7 @@ export class ChatComponent implements OnInit {
     // console.log(this.chatbody);
     this.chatservice.uploadchats(this.chatbody).subscribe(res => {
       // console.log(res);
-      // this.chatArr = res;
+      this.chatArr.push(res);
       // console.log(res[0].id);
       // console.log(this.chatArr);
     }, err => {
@@ -60,9 +62,29 @@ export class ChatComponent implements OnInit {
     });
   }
 
-  sendMessageOnEnter($event, messagebox) {
-    if ($event.which === 13) { // ENTER_KEY
-        this.onSubmit(messagebox);
+  sendMessageOnEnter(messagebox) {
+    this.onSubmit(messagebox);
+  }
+
+  logOut() {
+    sessionStorage.removeItem("loggedUser");
+    // console.log(this.allLoggedUsers)
+    for (let i = 0; i < this.allUsers.length; i++) {
+      if (this.loggedUser === this.allUsers[i].username) {
+        this.allUsers[i].islogged = "false";
+        // console.log(this.allUsers);
+        
+        this.loginservice.updateUser(i+1, { "islogged": "false" }).subscribe(
+          (data) => {
+            console.log(data);
+          },
+          (error) => {
+            console.log(error.message);
+          }
+        );
+        
+      }
     }
-}
+    this.router.navigate(['login']);
+  }
 }
