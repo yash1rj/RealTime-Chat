@@ -15,4 +15,8 @@ export class ChatService {
     return this.http.get(this.chatUrl);
   }
 
+  uploadchats(data):Observable<any>{
+    return this.http.post(this.chatUrl, data);
+  }
+
 }
