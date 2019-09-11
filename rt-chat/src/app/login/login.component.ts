@@ -50,7 +50,8 @@ export class LoginComponent implements OnInit {
 
         this.loginservice.updateUser(i+1, { "islogged": "true" }).subscribe(
           (data) => {
-            // console.log(data);
+            // console.log(this.allUsers[i].username);
+            sessionStorage.setItem("loggedUser", this.allUsers[i].username)
           },
           (error) => {
             console.log(error.message);
@@ -63,15 +64,5 @@ export class LoginComponent implements OnInit {
       }
 
     }
-    // this.registerservice.regUser(this.regbody).subscribe(
-    //     (data)  => {
-    //       console.log("POST Request is successful ", data);
-    //       this.registerForm.reset();
-    //       this.router.navigate(['login']);
-    //     },
-    //     (error)  => {
-    //       console.log(error.message);
-    //     }
-    //   );
   }
 }
