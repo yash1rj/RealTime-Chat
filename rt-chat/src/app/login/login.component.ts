@@ -47,11 +47,11 @@ export class LoginComponent implements OnInit {
         this.loginCondition = true;
         this.allUsers[i].islogged = "true";
         // console.log(this.allUsers);
-
+        sessionStorage.setItem("loggedUser", this.allUsers[i].username);
+        
         this.loginservice.updateUser(i+1, { "islogged": "true" }).subscribe(
           (data) => {
             // console.log(this.allUsers[i].username);
-            sessionStorage.setItem("loggedUser", this.allUsers[i].username)
           },
           (error) => {
             console.log(error.message);
