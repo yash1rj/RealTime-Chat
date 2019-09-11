@@ -2,10 +2,9 @@
 
     <!-- Sidebar -->
     <div class="bg-dark text-light border-right" id="sidebar-wrapper">
-        <div class="sidebar-heading border-bottom border-dark">Connections</div>
-        <div class="list-group list-group-flush">
-            <p class="list-group-item list-group-item-action bg-light text-dark">User1</p>
-            <p class="list-group-item list-group-item-action bg-light text-dark">User2</p>
+        <div class="sidebar-heading border-bottom border-dark border-top border-white">People Online</div>
+        <div class="list-group list-group-flush" *ngFor="let ppl of allLoggedUsers">
+            <p class="list-group-item list-group-item-action bg-light text-dark">{{ ppl.username }}</p>
         </div>
     </div>
 
@@ -19,19 +18,19 @@
                 <p class="msg">
                     <i class="usr">User1</i> <br /> Message1
                 </p>
-                <p class="msg" [ngClass]="{ ownMessage: 1===1 }">
+                <p class="msg">
                     <i class="usr">User2</i> <br /> Message2
                 </p>
-                <p class="msg" *ngFor="let message of chatArr">
+                <p class="msg" *ngFor="let message of chatArr" [ngClass]="{ ownMessage: message.username === loggedUser }">
                     <i class="usr">{{ message.username }}</i> <br /> {{ message.msg }}
                 </p>
             </div>
             <br /><br /><br />
             <div class="container-fluid mb-2" id="texting">
                 <div class="input-group">
-                    <input type="text" class="form-control" id="chatText" />
+                    <input type="text" class="form-control" (keyup)="sendMessageOnEnter($event, chatText.value)" id="chatText" #chatText required />
                     <div class="input-group-append">
-                        <button class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        <button class="btn btn-primary" (click)="onSubmit(chatText.value)"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>
