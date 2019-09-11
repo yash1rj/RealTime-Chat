@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { RegisterationComponent } from './registeration/registeration.component';
 import { ChatComponent } from './chat/chat.component';
 import { Validations } from './validators';
+import { CanActivateRouteGuard } from './can-activate-route.guard';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { Validations } from './validators';
     FormsModule,
     HttpClientModule
   ],
-  providers: [Validations],
+  providers: [Validations, CanActivateRouteGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
