@@ -12,15 +12,15 @@
       "username": "kumar1",
       "name": "Ayush Kumar",
       "emailId": "aayushk@gmail.com",
-      "password": "godfather",
-      "islogged": "false",
+      "password": "Godfather1",
+      "islogged": "true",
       "id": 2
     },
     {
       "username": "harshD",
       "name": "harsh deora",
       "emailId": "harsh.hero@hpe.com",
-      "password": "baaplog",
+      "password": "Baaplog2",
       "islogged": "false",
       "id": 3
     },
@@ -28,8 +28,8 @@
       "username": "elle",
       "name": "Elesh agrawal",
       "emailId": "elesh@autocop.com",
-      "password": "imellu",
-      "islogged": "false",
+      "password": "Imellu3000",
+      "islogged": "true",
       "id": 4
     }
   ],
@@ -38,6 +38,81 @@
       "id": 1,
       "username": "yash1rj",
       "msg": "Hello RT-Chat!"
+    },
+    {
+      "username": "yash1rj",
+      "msg": "yash",
+      "id": 2
+    },
+    {
+      "username": "yash1rj",
+      "msg": "ghjjkk",
+      "id": 3
+    },
+    {
+      "username": "kumar1",
+      "msg": "hello",
+      "id": 4
+    },
+    {
+      "username": "yash1rj",
+      "msg": "sdsvdb",
+      "id": 5
+    },
+    {
+      "username": "yash1rj",
+      "msg": "dfxvbnm",
+      "id": 6
+    },
+    {
+      "username": "kumar1",
+      "msg": "ghjkjlk",
+      "id": 7
+    },
+    {
+      "username": "yash1rj",
+      "msg": "sad",
+      "id": 8
+    },
+    {
+      "username": "yash1rj",
+      "msg": "",
+      "id": 9
+    },
+    {
+      "username": "yash1rj",
+      "msg": "",
+      "id": 10
+    },
+    {
+      "username": "yash1rj",
+      "msg": "",
+      "id": 11
+    },
+    {
+      "username": "yash1rj",
+      "msg": "",
+      "id": 12
+    },
+    {
+      "username": "yash1rj",
+      "msg": "bmnm",
+      "id": 13
+    },
+    {
+      "username": "yash1rj",
+      "msg": "",
+      "id": 14
+    },
+    {
+      "username": "yash1rj",
+      "msg": "vnbnmm,,.",
+      "id": 15
+    },
+    {
+      "username": "elle",
+      "msg": "sfdsdgfhjk",
+      "id": 16
     }
   ]
 }
