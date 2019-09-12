@@ -14,11 +14,11 @@
         <div class="container-fluid">
             <h1 class="mt-4 text-center">Welcome to CHAT ROOM</h1>
             <p class="text-right">Hello, {{ loggedUser }} <button type="button" class="btn btn-link" (click)="logOut()">&#60;Logout&#62;</button></p>
-            <div class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
-                <p class="msg" *ngFor="let message of chatArr" [ngClass]="{ ownMessage: message.username === loggedUser }">
+            <ul class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                <li class="msg" *ngFor="let message of chatArr" [ngClass]="{ ownMessage: message.username === loggedUser }">
                     <i class="usr">{{ message.username }}</i> <br /> {{ message.msg }}
-                </p>
-            </div>
+                </li>
+            </ul>
             <br /><br /><br />
             <div class="container-fluid mb-2" id="texting">
                 <div class="input-group">
