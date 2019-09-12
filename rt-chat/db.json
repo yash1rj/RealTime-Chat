@@ -6,7 +6,7 @@
       "name": "Yash Raj",
       "emailId": "yashrj130@gmail.com",
       "password": "Admin123",
-      "islogged": "true"
+      "islogged": "false"
     },
     {
       "username": "kumar1",
@@ -21,7 +21,7 @@
       "name": "harsh deora",
       "emailId": "harsh.hero@hpe.com",
       "password": "Baaplog2",
-      "islogged": "true",
+      "islogged": "false",
       "id": 3
     },
     {
@@ -29,7 +29,7 @@
       "name": "Elesh agrawal",
       "emailId": "elesh@autocop.com",
       "password": "Imellu3000",
-      "islogged": "true",
+      "islogged": "false",
       "id": 4
     }
   ],
@@ -88,6 +88,11 @@
       "username": "yash1rj",
       "msg": "wftrytuyul",
       "id": 11
+    },
+    {
+      "username": "yash1rj",
+      "msg": "sadfsg",
+      "id": 12
     }
   ]
 }

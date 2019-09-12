@@ -69,6 +69,7 @@ export class ChatComponent implements OnInit {
   logOut() {
     sessionStorage.removeItem("loggedUser");
     // console.log(this.allLoggedUsers)
+
     for (let i = 0; i < this.allUsers.length; i++) {
       if (this.loggedUser === this.allUsers[i].username) {
         this.allUsers[i].islogged = "false";
