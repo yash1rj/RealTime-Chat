@@ -6,7 +6,7 @@
       "name": "Yash Raj",
       "emailId": "yashrj130@gmail.com",
       "password": "Admin123",
-      "islogged": "false"
+      "islogged": "true"
     },
     {
       "username": "kumar1",
@@ -93,6 +93,11 @@
       "username": "yash1rj",
       "msg": "sadfsg",
       "id": 12
+    },
+    {
+      "username": "yash1rj",
+      "msg": "wqewwretrytuyiu",
+      "id": 13
     }
   ]
 }
