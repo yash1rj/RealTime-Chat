@@ -12,19 +12,30 @@
     <div id="page-content-wrapper">
 
         <div class="container-fluid">
-            <h1 class="mt-4 text-center">Welcome to CHAT ROOM</h1>
-            <p class="text-right">Hello, {{ loggedUser }} <button type="button" class="btn btn-link" (click)="logOut()">&#60;Logout&#62;</button></p>
-            <ul class="messages" #scrollMe [scrollTop]="scrollMe.scrollHeight">
-                <li class="msg" *ngFor="let message of chatArr" [ngClass]="{ ownMessage: message.username === loggedUser }">
-                    <i class="usr">{{ message.username }}</i> <br /> {{ message.msg }}
-                </li>
-            </ul>
-            <br /><br /><br />
-            <div class="container-fluid mb-2" id="texting">
-                <div class="input-group">
-                    <input type="text" class="form-control" (keydown.enter)="sendMessageOnEnter(chatText.value);false;chatText.value='';" id="chatText" #chatText required />
+            <div class="row mx-auto">
+                <h1 class="mt-4 col mx-auto text-center">Welcome to CHAT ROOM</h1>
+            </div>
+            <div class="row mx-auto justify-content-end">
+                <p id="para" class="text-right col">Hello, {{ loggedUser }} <button type="button" id="butn" class="btn btn-link"
+                        (click)="logOut()">&#60;Logout&#62;</button></p>
+            </div>
+            <div class="row mx-auto">
+                <ul class="messages col" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                    <li class="msg" *ngFor="let message of chatArr"
+                        [ngClass]="{ ownMessage: message.username === loggedUser }">
+                        <i class="usr">{{ message.username }}</i> <br /> {{ message.msg }}
+                    </li>
+                </ul>
+            </div>
+            <div class="row mx-auto"><br /><br /></div>
+            <div class="row mx-auto mb-2" id="texting">
+                <div class="input-group col">
+                    <input type="text" class="form-control"
+                        (keydown.enter)="sendMessageOnEnter(chatText.value);false;chatText.value='';" id="chatText"
+                        #chatText required />
                     <div class="input-group-append">
-                        <button class="btn btn-primary" (click)="onSubmit(chatText.value);chatText.value='';"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        <button class="btn btn-primary" (click)="onSubmit(chatText.value);chatText.value='';"><i
+                                class="fa fa-paper-plane" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </div>
