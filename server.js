@@ -10,6 +10,7 @@ const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
 const port = process.env.PORT || 3000;
+// console.log(process.env.PORT);
 
 app.use('/api', middlewares);
 app.use('/api', router);
