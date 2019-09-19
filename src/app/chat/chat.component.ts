@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../service/chat.service';
 import { LoginService } from '../service/login.service';
 import { Router } from '@angular/router';
+import {interval} from "rxjs/internal/observable/interval";
+import {startWith, switchMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-chat',
@@ -28,7 +30,28 @@ export class ChatComponent implements OnInit {
       console.log(err.message);
     });
 
-    this.loginservice.getUsers().subscribe(
+    // this.loginservice.getUsers().subscribe(
+    //   (data) => {
+    //     // console.log(data);
+    //     this.loggedUser = sessionStorage.getItem("loggedUser");
+    //     this.allUsers = data;
+    //     this.allLoggedUsers = data.filter(function (user) {
+    //       return user.islogged == 'true';
+    //     });
+    //     // console.log(this.allLoggedUsers);
+    //     // console.log(this.loggedUser);
+    //   },
+    //   (error) => {
+    //     console.log(error.message);
+    //   }
+    // );
+
+  interval(5000)
+    .pipe(
+      startWith(0),
+      switchMap(() => this.loginservice.getUsers())
+    )
+    .subscribe(
       (data) => {
         // console.log(data);
         this.loggedUser = sessionStorage.getItem("loggedUser");
