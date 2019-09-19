@@ -11,7 +11,7 @@ export class RegisterService {
   
   port = process.env.PORT || 3000;
 
-  registerUrl: string=`http://localhost:${this.port}/api/userTable`;
+  registerUrl: string=`/api/userTable`;
 
   regUser(user):Observable<any>{
     return this.http.post(this.registerUrl, user);

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class LoginService {
 
   port = process.env.PORT || 3000;
-  userUrl:string=`http://localhost:${this.port}/api/userTable`;
+  userUrl:string=`/api/userTable`;
   constructor(private http:HttpClient) { }
 
   getUsers():Observable<any>{
