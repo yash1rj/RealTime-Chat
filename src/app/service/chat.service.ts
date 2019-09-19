@@ -9,7 +9,6 @@ export class ChatService {
 
   constructor(private http:HttpClient) { }
 
-  port = process.env.PORT || 3000;
   chatUrl: string=`/api/chatTable`;
 
   getchats():Observable<any>{

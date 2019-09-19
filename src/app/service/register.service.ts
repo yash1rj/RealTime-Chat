@@ -8,8 +8,6 @@ import { Observable } from 'rxjs';
 export class RegisterService {
 
   constructor(private http:HttpClient) { }
-  
-  port = process.env.PORT || 3000;
 
   registerUrl: string=`/api/userTable`;
 

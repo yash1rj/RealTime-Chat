@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  port = process.env.PORT || 3000;
   userUrl:string=`/api/userTable`;
   constructor(private http:HttpClient) { }
 
